@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.5.1",
+    "tailwindcss": "^3.0.7"
+  },
+  "scripts": {
+    "tailwind": "tailwindcss -i src/css/tailwind.css -o src/css/styles.css --watch",
+    "livereload": "browser-sync start --server 'src' --files 'src' --watch",
+    "dev": "concurrently 'yarn tailwind' 'yarn livereload'"
+  }
+}
