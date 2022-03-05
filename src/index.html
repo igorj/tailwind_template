@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,46 @@
   <title>Tailwind CSS 3.0 Test</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <h1 class="text-2xl text-blue-600">Tailwind CSS 3.0 Playground</h1>
+
+<body class="p-2">
+  <h1 class="text-2xl text-green-600">Tailwind CSS 3.0</h1>
   <p>Test</p>
+
+  <ul role="list" class="p-6 divide-y divide-gray-200">
+    <!-- Remove top/bottom padding when first/last child -->
+    <li class="flex py-4 first:pt-0 last:pb-0">
+      <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900">Igor</p>
+        <p class="text-sm text-gray-500 truncate">igorj@hey.com</p>
+      </div>
+    </li>
+    <!-- Remove top/bottom padding when first/last child -->
+    <li class="flex py-4 first:pt-0 last:pb-0">
+      <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900">Zsuzsanna</p>
+        <p class="text-sm text-gray-500 truncate">sirius7@gmx.at</p>
+      </div>
+    </li>
+  </ul>
+
+  <h3 class="mt-5 mb-3 text-xs uppercase">Using before: modifier to create skewed background on a single word:</h3>
+  <blockquote class="text-xl italic font-semibold text-center text-gray-500">
+    When you look
+    <span class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500">
+      <span class="relative text-white">annoyed</span>
+    </span>
+    all the time, people think that you're busy.
+  </blockquote>
+
+  <h3 class="mt-5 mb-3 text-xs uppercase">Using after: modifier to add required star to a label:</h3>
+  <label class="block">
+    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+      Email
+    </span>
+    <input type="email" name="email" class="block w-full px-3 py-2 mt-1 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 sm:text-sm focus:ring-1" placeholder="you@example.com" />
+  </label>
 </body>
+
 </html>
